@@ -67,7 +67,8 @@ IntelChat/
 - LinkedIn: https://www.linkedin.com/in/mohan-kumar-sa
 - Portfol: https://amohanverse.netlify.app/
 
-  <img width="1920" height="979" alt="image" src="https://github.com/user-attachments/assets/bd52f0e7-31cb-44d6-821e-5304a55199ce" />
+  <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/19d101e2-58cf-41ac-b1fa-99268e5235c5" />
+
 
 ## License
 
