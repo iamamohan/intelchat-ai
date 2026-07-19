@@ -1,32 +1,31 @@
-# IntelChat - AI Knowledge Assistant
+# IntelChat
 
-IntelChat is an AI-powered Retrieval-Augmented Generation (RAG) application that allows users to upload PDF documents and ask questions using a local Large Language Model (LLM). It combines semantic search with AI to provide accurate, context-aware responses from uploaded documents.
+IntelChat is an AI-powered RAG (Retrieval-Augmented Generation) application that lets users upload PDF documents and ask questions using a local Large Language Model (LLM). It retrieves relevant information from documents and generates accurate, context-aware answers.
 
 ## Features
 
-- Upload and chat with PDF documents
+- Upload and chat with PDF files
 - AI-powered question answering
 - Retrieval-Augmented Generation (RAG)
-- Semantic search using ChromaDB
-- Streaming AI responses
+- Semantic search with ChromaDB
+- Streaming responses
 - Conversation history
-- Pinned conversations
-- Modern and responsive UI
-- Local AI inference using Ollama
+- Responsive user interface
+- Local AI using Ollama
 
 ## Tech Stack
 
-### Frontend
+**Frontend**
 - Next.js
 - React
 - TypeScript
 - Tailwind CSS
 
-### Backend
+**Backend**
 - FastAPI
 - Python
 
-### AI & Database
+**AI & Database**
 - Ollama
 - Qwen 2.5
 - ChromaDB
@@ -35,39 +34,44 @@ IntelChat is an AI-powered Retrieval-Augmented Generation (RAG) application that
 
 ## Project Structure
 
-```
-IntelChat-AI/
+```text
+IntelChat/
 ├── backend/
 ├── frontend/
 ├── docs/
 └── README.md
 ```
 
-## How It Works
+## Workflow
 
 1. Upload a PDF document.
 2. The document is processed and converted into embeddings.
 3. Embeddings are stored in ChromaDB.
-4. Ask questions about the uploaded document.
-5. Relevant content is retrieved and sent to the LLM.
-6. IntelChat generates an accurate response based on the document.
+4. Ask questions about the document.
+5. Relevant content is retrieved.
+6. The AI generates an answer based on the retrieved context.
 
-## Future Enhancements
+## Future Improvements
 
-- Multi-document support
+- Support multiple documents
 - OCR for scanned PDFs
 - User authentication
 - Cloud deployment
-- Voice interaction
+- Voice support
 
 ## Author
 
-Mohan Kumar A
+**Mohan Kumar**
 
 - GitHub: https://github.com/iamamohan
-- LinkedIn:*(linkedin.com/in/mohan-kumar-sa)*
+- LinkedIn: https://www.linkedin.com/in/mohan-kumar-sa
+- Portfol: https://amohanverse.netlify.app/
 
   <img width="1920" height="979" alt="image" src="https://github.com/user-attachments/assets/bd52f0e7-31cb-44d6-821e-5304a55199ce" />
 
+## License
 
 This project is licensed under the MIT License.
+
+  
+
