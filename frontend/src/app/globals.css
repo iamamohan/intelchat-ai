@@ -1,0 +1,223 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --font-heading: var(--font-heading);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  
+  /* Custom Divider & Highlight Colors */
+  --color-divider: var(--divider);
+  --color-highlight: var(--highlight);
+  
+  /* Custom Radius */
+  --radius-card: var(--radius-card);
+  --radius-button: var(--radius-button);
+  --radius-input: var(--radius-input);
+  --radius-dialog: var(--radius-dialog);
+  --radius: var(--radius);
+
+  /* Custom Status Colors */
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-error: var(--error);
+  --color-surface: var(--surface);
+}
+
+:root {
+  /* Default is Dark theme (IntelChat is Dark First!) */
+  --background: #1E1F21;
+  --foreground: #FFFFFF;
+  --surface: #222325;
+  --card: #28292B;
+  --card-foreground: #FFFFFF;
+  --popover: #28292B;
+  --popover-foreground: #FFFFFF;
+  
+  --primary: #D97757;
+  --primary-foreground: #FFFFFF;
+  --secondary: #28292B;
+  --secondary-foreground: #B5B5B5;
+  
+  --muted: #28292B;
+  --muted-foreground: #A0A0A0;
+  --accent: #D97757;
+  --accent-foreground: #FFFFFF;
+  --highlight: rgba(217,119,87,0.18);
+  
+  --border: rgba(255,255,255,0.08);
+  --input: #2A2B2E;
+  --ring: #D97757;
+  --divider: rgba(255,255,255,0.08);
+  
+  --success: #4CAF50;
+  --warning: #FF9800;
+  --error: #F44336;
+  --destructive: #F44336;
+  
+  --radius-card: 16px;
+  --radius-button: 12px;
+  --radius-input: 12px;
+  --radius-dialog: 20px;
+  --radius: 16px;
+
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-heading: var(--font-inter), system-ui, sans-serif;
+  --font-mono: var(--font-mono), monospace;
+
+  --sidebar: #222325;
+  --sidebar-foreground: #FFFFFF;
+  --sidebar-primary: #D97757;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: rgba(255,255,255,0.05);
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border: rgba(255,255,255,0.08);
+  --sidebar-ring: #D97757;
+}
+
+/* Define explicit dark theme (identical to root since root is dark first) */
+.dark {
+  --background: #1E1F21;
+  --foreground: #FFFFFF;
+  --surface: #222325;
+  --card: #28292B;
+  --card-foreground: #FFFFFF;
+  --popover: #28292B;
+  --popover-foreground: #FFFFFF;
+  
+  --primary: #D97757;
+  --primary-foreground: #FFFFFF;
+  --secondary: #28292B;
+  --secondary-foreground: #B5B5B5;
+  
+  --muted: #28292B;
+  --muted-foreground: #A0A0A0;
+  --accent: #D97757;
+  --accent-foreground: #FFFFFF;
+  --highlight: rgba(217,119,87,0.18);
+  
+  --border: rgba(255,255,255,0.08);
+  --input: #2A2B2E;
+  --ring: #D97757;
+  --divider: rgba(255,255,255,0.08);
+
+  --success: #4CAF50;
+  --warning: #FF9800;
+  --error: #F44336;
+  --destructive: #F44336;
+
+  --sidebar: #222325;
+  --sidebar-foreground: #FFFFFF;
+  --sidebar-primary: #D97757;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: rgba(255,255,255,0.05);
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border: rgba(255,255,255,0.08);
+  --sidebar-ring: #D97757;
+}
+
+/* Elegant light mode (using soft whites, light gray, minimal contrast) */
+.light {
+  --background: #F7F7F5;
+  --foreground: #1E1E1E;
+  --surface: #EFEFEA;
+  --card: #FFFFFF;
+  --card-foreground: #1E1E1E;
+  --popover: #FFFFFF;
+  --popover-foreground: #1E1E1E;
+  
+  --primary: #D97757;
+  --primary-foreground: #FFFFFF;
+  --secondary: #FFFFFF;
+  --secondary-foreground: #4A4A4A;
+  
+  --muted: #EFEFEA;
+  --muted-foreground: #71717A;
+  --accent: #D97757;
+  --accent-foreground: #FFFFFF;
+  --highlight: rgba(217,119,87,0.18);
+  
+  --border: #E3E3DE;
+  --input: #FFFFFF;
+  --ring: #D97757;
+  --divider: #E3E3DE;
+  
+  --success: #2EA043;
+  --warning: #BF8B1B;
+  --error: #D9383E;
+  --destructive: #D9383E;
+
+  --sidebar: #EFEFEA;
+  --sidebar-foreground: #1E1E1E;
+  --sidebar-primary: #D97757;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: rgba(0,0,0,0.05);
+  --sidebar-accent-foreground: #1E1E1E;
+  --sidebar-border: #E3E3DE;
+  --sidebar-ring: #D97757;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-semibold tracking-tight;
+  }
+}
+
+/* Custom Scrollbar for a premium look */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted-foreground);
+}
+
+/* Hide default input focus styles */
+input:focus, textarea:focus, select:focus {
+  outline: none;
+}

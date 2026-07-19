@@ -1,0 +1,42 @@
+# Python
+backend/venv/
+backend/__pycache__/
+*.pyc
+*.pyo
+
+# Environment
+backend/.env
+
+# Database
+backend/*.db
+backend/*.db.bak
+
+# ChromaDB
+backend/chroma_db/
+
+# Uploads
+backend/uploads/
+
+# Logs
+*.log
+
+# Node
+frontend/node_modules/
+
+# Next.js
+frontend/.next/
+frontend/out/
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build
+dist/
+build/
+
+# Temporary
+*.tmp
