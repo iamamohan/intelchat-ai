@@ -5,7 +5,6 @@ const nextConfig: NextConfig = {
     proxyTimeout: 300000,
   },
   async rewrites() {
-    if (process.env.NODE_ENV !== 'development') return [];
     return [
       {
         source: "/api/:path*",
