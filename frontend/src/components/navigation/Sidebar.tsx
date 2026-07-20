@@ -84,6 +84,12 @@ export function Sidebar() {
     e.stopPropagation()
     if (confirm("Are you sure you want to delete this chat session?")) {
       await deleteSession(sessionId)
+      const nextActive = useSessionStore.getState().activeSessionId
+      if (nextActive) {
+        router.push(`/?session=${nextActive}`)
+      } else {
+        router.push(`/`)
+      }
     }
   }
 

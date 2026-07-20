@@ -30,7 +30,9 @@ apiClient.interceptors.response.use(
     } else if (error.code === 'ECONNABORTED') {
       console.error(`[API Request Timeout] The request exceeded the 5-minute timeout.`)
     } else {
-      console.error(`[API Request Failed] Status: ${error.response?.status || 'Unknown'} - ${error.message}`)
+      if (error.response?.status !== 404) {
+        console.error(`[API Request Failed] Status: ${error.response?.status || 'Unknown'} - ${error.message}`)
+      }
     }
     return Promise.reject(error)
   }
