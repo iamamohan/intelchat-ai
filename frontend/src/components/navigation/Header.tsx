@@ -86,7 +86,7 @@ export function Header() {
               />
               <TooltipContent>Theme options</TooltipContent>
             </Tooltip>
-            
+
             <DropdownMenuContent align="end" className="w-36 bg-surface border-border/80 rounded-xl shadow-sm">
               <DropdownMenuItem onClick={() => setTheme("dark")} className="flex items-center gap-2 text-[12px] text-foreground cursor-pointer focus:bg-sidebar-accent">
                 <Moon className="size-3.5" /> Dark
