@@ -2,8 +2,6 @@
 
 IntelChat is an AI-powered RAG (Retrieval-Augmented Generation) application that lets users upload PDF documents and ask questions using a local Large Language Model (LLM). It retrieves relevant information from documents and generates accurate, context-aware answers.
 
-**Live Demo:** [https://intelchat-ai-six.vercel.app/](https://intelchat-ai-six.vercel.app/)
-
 ## Features
 
 - Upload and chat with PDF files
@@ -71,10 +69,102 @@ IntelChat/
 
   <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/19d101e2-58cf-41ac-b1fa-99268e5235c5" />
 
+  ## Demo
+A live demo is currently unavailable because the backend is not deployed yet. You can run the project locally by following the installation instructions provided in this repository.
 
-## License
+  ### Run Locally
 
-This project is licensed under the MIT License.
+#### 1. Clone the repository
+
+```bash
+git clone https://github.com/iamamohan/intelchat-ai.git
+cd intelchat-ai
+```
+
+#### 2. Backend Setup
+
+```bash
+cd backend
+
+python -m venv venv
+```
+
+Activate the virtual environment:
+
+**Windows**
+
+```bash
+venv\Scripts\activate
+```
+
+**Linux / macOS**
+
+```bash
+source venv/bin/activate
+```
+
+Install the required dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Create a `.env` file in the `backend` directory and configure the required environment variables.
+
+Start the backend server:
+
+```bash
+uvicorn app.main:app --reload
+```
+
+The backend will be available at:
+
+```
+http://127.0.0.1:8000
+```
+
+#### 3. Frontend Setup
+
+Open a new terminal:
+
+```bash
+cd frontend
+
+npm install
+
+npm run dev
+```
+
+The frontend will be available at:
+
+```
+http://localhost:3000
+```
+
+#### 4. Start Ollama
+
+Make sure Ollama is installed and running.
+
+Pull the required model (if not already installed):
+
+```bash
+ollama pull qwen2.5:3b
+```
+
+Start the model:
+
+```bash
+ollama run qwen2.5:3b
+```
+
+#### 5. Use the Application
+
+- Open **http://localhost:3000**
+- Upload a PDF document.
+- Ask questions about the uploaded document.
+- The AI will retrieve relevant information and generate context-aware responses.
+
+
 
   
 
