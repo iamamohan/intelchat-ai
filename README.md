@@ -59,20 +59,13 @@ IntelChat/
 - Cloud deployment
 - Voice support
 
-## Author
+## Demo
 
-**Mohan Kumar**
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/19d101e2-58cf-41ac-b1fa-99268e5235c5" />
 
-- GitHub: https://github.com/iamamohan
-- LinkedIn: https://www.linkedin.com/in/mohan-kumar-sa
-- Portfol: https://amohanverse.netlify.app/
+  A live demo is currently unavailable because the backend is not deployed yet. You can run the project locally by following the installation instructions        provided   in this repository.
 
-  <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/19d101e2-58cf-41ac-b1fa-99268e5235c5" />
-
-  ## Demo
-A live demo is currently unavailable because the backend is not deployed yet. You can run the project locally by following the installation instructions provided in this repository.
-
-  ### Run Locally
+### Run Locally
 
 #### 1. Clone the repository
 
@@ -163,6 +156,14 @@ ollama run qwen2.5:3b
 - Upload a PDF document.
 - Ask questions about the uploaded document.
 - The AI will retrieve relevant information and generate context-aware responses.
+
+## Author
+
+**Mohan Kumar**
+
+- GitHub: https://github.com/iamamohan
+- LinkedIn: https://www.linkedin.com/in/mohan-kumar-sa
+- Portfol: https://amohanverse.netlify.app/
 
 
 
