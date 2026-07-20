@@ -252,7 +252,7 @@ export function Sidebar() {
                 </div>
               ) : (
                 documents.map(doc => {
-                  const date = new Date(doc.upload_time)
+                  const date = new Date(doc.upload_timestamp)
                   const dateStr = date.toLocaleDateString(undefined, { month: 'short', day: 'numeric' })
                   const isSelected = selectedDocumentId === doc.document_id
                   
