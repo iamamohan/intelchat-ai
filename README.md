@@ -2,6 +2,8 @@
 
 IntelChat is an AI-powered RAG (Retrieval-Augmented Generation) application that lets users upload PDF documents and ask questions using a local Large Language Model (LLM). It retrieves relevant information from documents and generates accurate, context-aware answers.
 
+**Live Demo:** [https://intelchat-ai-six.vercel.app/](https://intelchat-ai-six.vercel.app/)
+
 ## Features
 
 - Upload and chat with PDF files
