@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import Link from "next/link"
+import { useRouter } from "next/navigation"
 import Image from "next/image"
 import { isToday, isYesterday } from "date-fns"
 import {
@@ -22,6 +23,7 @@ import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 
 export function Sidebar() {
+  const router = useRouter()
   const { isSidebarOpen } = useUIStore()
   const { 
     sessions, 
@@ -61,6 +63,7 @@ export function Sidebar() {
       const newId = await createSession("New Chat")
       setActiveSessionId(newId)
       setSelectedDocumentId(null)
+      router.push(`/?session=${newId}`)
       setTimeout(() => document.getElementById("chat-input")?.focus(), 100)
     } catch (err) {
       console.error(err)
