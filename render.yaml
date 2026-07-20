@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: intelchat-backend
+    env: python
+    rootDir: backend
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "uvicorn app.main:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.12
+      - key: ALLOWED_ORIGINS
+        value: "https://intelchat-ai-six.vercel.app,http://localhost:3000"
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: LLM_PROVIDER
+        value: "gemini"
+      # If using persistent disk, uncomment these and the disk section below:
+      # - key: CHROMA_DB_PATH
+      #   value: /data/chroma_db
+      # - key: DOCUMENT_REGISTRY_PATH
+      #   value: /data/document_registry.db
+
+    # Uncomment this if you upgrade to a paid Render plan to keep data between deploys
+    # disk:
+    #   name: intelchat-data
+    #   mountPath: /data
+    #   sizeGB: 1
